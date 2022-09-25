@@ -1,1 +1,4 @@
+How to make something compatible with iMessage?
+
+We need to download XCode, which has the IOS SDK and the tools needed to build, test and submit the project we will be constructing this and next semester. To be compatible with iMessage we also need to learn more about message frameworks which we will be doing in the second sprint. Next we need to consider the guidelines that are set by the Apple App Store which controls what's in each extension added to iMessage for security and usability. We want to take advantage of MSMessage and MSConversation to create interactive content for the user. We will also be doing more research into the API used by Apple that has a myriad of classes that are essential in making this app.
 
