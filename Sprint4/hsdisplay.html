@@ -1,27 +1,44 @@
-import Control.Monad
-import Text.ParserCombinator.Parsec
+<!doctype html><html lang="en">
+<head>
+    <title>Haskell Display </title>
+    <link href="cppstyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!--<summary>
+    //<para>In here we are calling css color code to match the Haskell language. <para>
+    //<summary>
+  -->
+    <header>
+        <h1>Haskell Display</h1>
+    </header>
+        <p><br>
+        <span class="blue">import</span> Control.Monad<br>
+        <span class="blue">import</span> Text.ParserCombinator.Parsec<br><br>
+        <span class="gray">-- AST Definition</span><br>
+        <span class="sgreen">data</span><span class="yellow"> CALC</span> where<br>
+        <span class="sgreen">&emsp;Num</span> :: Int -> <span class="yellow"> CALC</span><br>
+        <span class="sgreen">&emsp;Plus</span> :: <span class="yellow"> CALC</span> -> <span class="yellow"> CALC</span> -> <span class="yellow"> CALC</span><br>
+        <span class="sgreen">&emsp;Minus</span> :: <span class="yellow"> CALC</span> -> <span class="yellow"> CALC</span> -> <span class="yellow"> CALC</span><br>
+        <span class="lgreen">&emsp;deriving</span> (<span class="rose">Show, Eq</span>)<br><br>
+        <span class="gray">-- Exercise 1</span><br>
+        evalErr :: <span class="yellow"> CALC</span> -> Int<br>
+        evalErr (<span class="sgreen">Num</span> x) = <span class="rose">if </span>x<<span class="red">0</span><br>
+        then error <span class="lgreen">"Bad no don't!"</span><br>
+        <span class="rose">else</span> x<br>
+        evalErr (<span class="sgreen">Plus</span> l r) = ((evalErr l) + (evalErr r))<br>
+        evalErr (<span class="sgreen">Minus</span> l r) = let x = ((evalErr l) - (evalErr r)) in<br>
+        <span class="rose">if</span> x<<span class="red">0</span><br>
+        then error <span class="lgreen">"Bad no don't!"</span><br>
+        <span class="rose">else</span> x<br>
+        parseString p = str = <br>
+        <span class="sgreen">&emsp;case</span> parese p <span class="lgreen">""</span> str of<br>
+        Left e -> error $ show e<br>
+        Right r -> r<br>
+        <span class="sgreen">main</span> = do<br>
+        <span class="sgreen">&emsp;putStrLn</span><span class="lgreen"> "Hello"</span><br>
+        <span class="sgreen">&emsp;putStrLn</span><span class="lgreen"> "World"</span><br>
 
--- AST Definition
-data CALC where
- Num :: Int -> CALC
- Plus :: CALC -> CALC -> CALC
- Minus :: CALC -> CALC -> CALC
- deriving (Show, Eq)
 
--- Exercise 1
-evalErr :: CALC -> Int
-evalErr (Num x) = if x<0
-then error "Bad no don't!"
-else x
-evalErr (Plus l r) = ((evalErr l) + (evalErr r))
-evalErr (Minus l r) = let x = ((evalErr l) - (evalErr r)) in
-if x<0
-then error "Bad no don't!"
-else x
-parseString p = str =
- case parese p "" str of
-Left e -> error $ show e
-Right r -> r
-main = do
- putStrLn "Hello"
- putStrLn "World"
+        </p>
+</body>
+</html>
