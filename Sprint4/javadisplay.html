@@ -1,25 +1,39 @@
-public class Main
-public static void main(String[] args) {
-//year to be checked
-
-int year = 1900;
-boolean leap = false;
-
-//if the year is divided by 4
-
-if(year % 4 == 0) {
-//if the year is a century
-
-if(year % 100 == 0) {
-//if year is divided by 400 then it is a leap year
-
-if(year % 400 == 0) {
-leap = true;
-else
-leap = true;
-} if(leap)
-System.out.println(year + "is a leap year.");
-else
-System.out.println(year + "is not a leap year.");
-}
-}
+<!doctype html><html lang="en">
+<head>
+    <title>Java Display </title>
+    <link href="cppstyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!--<summary>
+     <para>In here we are calling css color code to match the Java language. <para>
+     <summary>
+    -->
+    <header>
+        <h1>Java Display</h1>
+    </header>
+        <p><br>
+        <span class="sgreen">public class</span> <span class="yellow">Main</span><br>
+        <span class="sgreen">public static void</span> <span class="yellow">main</span>(<span class="blue">String[] args</span>) {<br>
+        <span class="gray">//year to be checked</span><br><br>
+        <span class="sgreen">int</span> year = <span class="red"> 1900</span>;<br>
+        <span class="sgreen">boolean</span> leap = <span class="rose">false</span>;<br><br>
+        <span class="gray">//if the year is divided by 4</span><br><br>
+        <span class="blue">if</span>(year % <span class="red">4</span> == <span class="red">0</span>) {<br>
+        <span class="gray">//if the year is a century</span><br><br>
+        <span class="blue">if</span>(year % <span class="red">100</span> == <span class="red">0</span>) {<br>
+        <span class="gray">//if year is divided by 400 then it is a leap year</span><br><br>
+        <span class="blue">if</span>(year % <span class="red">400</span> == <span class="red">0</span>) {<br>
+        leap =<span class="rose">&emsp;true</span>;<br>
+        <span class="blue">else</span><br>
+        leap =<span class="rose">&emsp;true</span>;<br>
+        }
+        <span class="blue">if</span>(leap)<br>
+        <span class="sgreen">System.out.println</span>(year + <span class="lgreen">"is a leap year."</span>);<br>
+        <span class="blue">else</span><br>
+        <span class="sgreen">System.out.println</span>(year + <span class="lgreen">"is not a leap year."</span>);<br>
+      } <br>
+      }
+         
+        </p>
+</body>
+</html>
