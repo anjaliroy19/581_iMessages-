@@ -1,34 +1,33 @@
 #editor {
-width: 400px;
-height: 100px;
-padding: 10px;
-
-background-color: black;
-color: white;
-font-size: 14px;
-font-family: monospace;
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family: monospace;
 }
 .statement {
-color: orange;
+    color: orange;
 }
 .function {
-color: yellow;
+  color: yellow;
 }
 .directives {
-color: #00FFFF;
+  color: 	#00FFFF;
 }
 .lib {
-color: #FF007F;
+  color: #FF007F;
 }
 .ident {
-color: #00FF7F;
+  color: #00FF7F;
 }
 .numb {
-color: red;
+  color: red;
 }
 .strings {
-color: #a7f432;
+  color: #a7f432;
 }
 .comments {
-color: grey;
+  color: grey;
 }
