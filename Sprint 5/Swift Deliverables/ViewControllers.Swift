@@ -14,5 +14,19 @@ class ViewController: UIViewController, MFMessageComposeViewControllerDelegate {
         super.didReceiveMemoryWarning()
         
     }
-
+   func displayMessageInterface() {
+    let composeVC = MFMessageComposeViewController()
+    composeVC.messageComposeDelegate = self
+    
+   
+    composeVC.recipients = ["3142026521"]
+    composeVC.body = "I love EECS581!"
+    
+    
+    if MFMessageComposeViewController.canSendText() {
+        self.present(composeVC, animated: true, completion: nil)
+    } else {
+        print("Can't send messages.")
+    }
+}
 }
