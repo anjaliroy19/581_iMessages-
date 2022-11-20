@@ -1,0 +1,5 @@
+Tried some work with swift and the tokenizers we made this sprint to see if we could connect them we believe that it should
+work once we have a swift interface we should be able to connect them together.
+
+If we run into issues that won't let us connect the the lexer files with swift so that we could parse the input and color code to that then we will look into other 
+ways to implement our idea.
