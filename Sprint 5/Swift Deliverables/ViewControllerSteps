@@ -1,0 +1,9 @@
+Step 1: In storyboard, drag a new UIViewController onto the Canvas. 
+
+Step 2: Each view controller should have a name that describes what kind of information or task it has. 
+To create a new view controller, select File->New->File and select a Cocoa Touch Class. Choose whether 
+to create it with Swift or Objective-C and inherit from UIViewController. View Controllers are often 
+in their own folder or "group" in the project explorer. 
+
+Step 3: Finally, you have to connect the view controller in Storyboard with the Swift view controller 
+you just created. Do that by selecting the view controller and setting the Identity Inspector. 
