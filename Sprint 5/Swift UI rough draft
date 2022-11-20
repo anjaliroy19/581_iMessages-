@@ -5,7 +5,9 @@ public struct DefaultSourceCodeTheme: SourceCodeTheme {
 	public init() {
 
 	}
-
+	//<summary>
+	//<para> returning color for a variable <para>
+	//<summary>
 	private static var lineNumbersColor: Color {
 		return Color(red: 100/255, green: 100/255, blue: 100/255, alpha: 1.0)
 	}
@@ -18,6 +20,9 @@ public struct DefaultSourceCodeTheme: SourceCodeTheme {
 
 	public let backgroundColor = Color(red: 31/255.0, green: 32/255, blue: 41/255, alpha: 1.0)
 
+	//<summary>
+	//<para> assigning a color with the correct tokens from the lexer <para>
+	//<summary>
 	public func color(for syntaxColorType: SourceCodeTokenType) -> Color {
 
 		switch syntaxColorType {
@@ -26,16 +31,8 @@ public struct DefaultSourceCodeTheme: SourceCodeTheme {
 
 		case .number:
 			return Color(red)
-
-		case .string:
-			return Color(grey)
-
-
-		case .editorPlaceholder:
-			return backgroundColor
 		}
 
 	}
 
 }
-
