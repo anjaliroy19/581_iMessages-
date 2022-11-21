@@ -1,0 +1,70 @@
+header{
+    text-align: center;
+    font-family: 'courier new';
+    font-size: 18pt;
+}
+p{
+    text-align: left;
+    background-color:#1e1e1f;
+    text-indent: 25px;
+    font-size: 14pt;
+    color: #f6f6f6;
+    width: 100%;
+    height: 100%;
+}
+.gray{
+    color: #caccd2;
+    font-family: 'courier new';
+}
+.rose{
+    color: #ea428f;
+    font-family: default;
+}
+.red{
+    color: #e9402f;
+    font-family: monospace;
+}
+.yellow{
+    color: #dffd52;
+    font-family: serif, monospace;
+}
+.lgreen{
+    color: #aefa4e;
+    font-family: serif;
+}
+.sgreen{
+    color: #74fbaf;
+    font-family: sans-serif;
+}
+.blue{
+    color: #66ddef;
+    font-family: sans-serif, monospace;
+}
+.mgray{
+    color: #caccd2;
+    font-family: 'consolas', monospace;
+}
+.mrose{
+    color: #ea428f;
+    font-family: 'courier', monospace;
+}
+.mred{
+    color: #e9402f;
+    font-family: 'lucida console', monospace;
+}
+.myellow{
+    color: #dffd52;
+    font-family: 'lucida typewriter', monospace;
+}
+.mlgreen{
+    color: #aefa4e;
+    font-family: 'lucida sans typewriter', monospace;
+}
+.msgreen{
+    color: #74fbaf;
+    font-family: 'monaco', monospace;
+}
+.mblue{
+    color: #66ddef;
+    font-family: 'andale mono', monospace;
+}
