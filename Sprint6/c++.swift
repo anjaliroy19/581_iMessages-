@@ -1,4 +1,9 @@
 //idea behind coloring syntax
+
+//Currently we tried running the lexer files on python and are running into multiple errors that we do not understand.
+//However, we are going to go try to talk to our 665 professor about these errors and see if he can lead us in the correct direction.
+//If this does not work and even if it does I believe we will try to look into other ways to produce a highlighter in the next sprint.
+//We are planning on writing a short report as to why this will not work/ why we can’t get it to work and find a different solution
 import Foundation
 
 public class Cplusplus: SourceCodeRegexLexer {
