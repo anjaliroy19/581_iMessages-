@@ -1,0 +1,5 @@
+https://setapp.com/how-to/resize-images-on-mac
+https://developer.apple.com/documentation/swiftui/font/monospaced()
+https://www.rapidtables.com/convert/color/hex-to-rgb.html
+https://developer.apple.com/tutorials/swiftui/creating-and-combining-views
+https://developer.apple.com/documentation/swiftui/textfield

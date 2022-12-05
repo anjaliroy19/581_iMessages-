@@ -1,0 +1,9 @@
+-Do colors appearing on iPhone or Swift Content Preview change from colors showing on docs?
+-How to get background color
+-How to add classes and files
+-Can we build custom Modifiers?
+	-Can a custom Modifier be "Auto-Indent?"
+-Extension
+	-Starting with App, then turning into iMessage extension
+	-What about a Widget? What about Apple Watch?
+	-https://developer.apple.com/documentation/widgetkit/building_widgets_using_widgetkit_and_swiftui

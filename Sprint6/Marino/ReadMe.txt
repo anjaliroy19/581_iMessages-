@@ -1,0 +1,15 @@
+Morgan Marino's Requirements:
+-Swift Cont. - EVERYONE has Swift downloaded and able to run test programs (Screenshots, tips, etc.) (Assigned to All)
+	-Followed Anjali's submissions from Sprint 5
+	-As shown by screenshots, I was able to download, run, and preview functioning code
+	-Originally, I didn't have enough disk space to accommodate Swift and it's UI features, but I managed to figure it out. Going forward, I do have to work efficiently and try not to download extra functionality unless it's absolutely necessary
+	-Already has capability to disable autocorrect, which is AWESOME!
+-Swift Cont. - TESTING! iMessage, iPhone keyboard, etc. Essentially covering our bases with all things our program will interact with. (Deliverables: Swift program, video/pictures of results, report of results and to-do list if there are issues (Assigned to All)
+	-Also shown by tests and screenshots
+	-See "TodoList.txt"
+-UI Cont. - Implement in Swift, start to design, add functionality? (like buttons clicking, code being reflected above as you type, ensuring our colors are reachable in Swift)
+	-Worked with getting colors into Swift; this actually took awhile since Swift doesn't like hex code. I tried using a function to convert hex to RGB, but I ended up just creating separate custom variables for each of our colors
+	-Requires new classes and files, which I feel like is expressed in Sprint 7, so I did what I could within my test file
+	-Background color is also incredibly difficult since Swift assumes you are developing for light and dark mode and has lots of safety features for background spacing
+-Font Cont. - Implement in Swift, make how-to if needed, what else is needed for a monospace font in Swift? (Deliverable: copy/past-able code for when we are ready to add font to final project next sem.)
+	-So far, I used the default Monospace font from Swift. I am working on implementing new fonts, but custom fonts like "Ariel" or "Courier" will take some more research and possibly some extra downloads into Swift
