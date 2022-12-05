@@ -42,17 +42,20 @@ public class javaScript: SourceCodeRegexLexer {
         generate.append(regexGenerate("//(.*)", tokenType: .comment))
 
         //<summary>
-        //<para> summary comments but depending on our color code may be same as the above tokenType <para>
+        //<para> summary comments but depending on our color code may be same as the above tokenType
+        //something currently wrong with the generation of tokens for summary comments <para>
         //<summary>
         generate.append(regexGenerate("(/\\*)(.*)(\\*/)", options: [.dotMatchesLineSeparators], tokenType: .comment))
 
         //<summary>
-        //<para> string literal for single line <para>
+        //<para> string literal for single line
+        //something currently wrong with the generation of tokens for single line<para>
         //<summary>
         generate.append(regexGenerate("(\"|@\")[^\"\\n]*(@\"|\")", tokenType: .string))
 
         //<summary>
-        //<para> string literal for multi line but depending on our color code may be same as the above tokenType <para>
+        //<para> string literal for multi line but depending on our color code may be same as the above tokenType
+        //something currently wrong with the generation of tokens for multi line<para>
         //<summary>
         generate.append(regexGenerate("(\"\"\")(.*?)(\"\"\")", options: [.dotMatchesLineSeparators], tokenType: .string))
 
