@@ -4,3 +4,5 @@ Personal research of Swift components and how to interacts with all the tools wi
 2.The next step is implementation of the code successfully through an app. Learning how to test the code we have written (learning the commands 
 and how to interact with the "mimicked iphone display". From previous research, I have gathered that the testing can be done directly as if we were
 holding an iphone so learning how to navigate the features through this display will be important. 
+How much code are we writing per sprint?
+1. We are planning to write 100-300 lines of code per individual and as we only have 3 more sprints left, implementing the code is going to be our top priority. We would like to implement our main feature in the next sprint, so we are anticipating a heavy emphasis on the code implementation. As we have not begun the app development yet, we will also have a significant amount of startup code that we will start with for setting everything up.
