@@ -20,7 +20,7 @@ struct SignInScreenView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .padding(.bottom, 30)
-                    
+                    //option to login with apple or google accounts
                     SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "apple")), text: Text("Sign in with Apple"))
                     
                     SocalLoginButton(image: Image(uiImage: #imageLiteral(resourceName: "google")), text: Text("Sign in with Google").foregroundColor(Color("PrimaryColor")))
@@ -28,7 +28,7 @@ struct SignInScreenView: View {
                     
                     Text("or get a link emailed to you")
                         .foregroundColor(Color.black.opacity(0.4))
-                    
+                    //asking for email 
                     TextField("Work email address", text: $email)
                         .font(.title3)
                         .padding()
@@ -62,7 +62,7 @@ struct SignInScreenView_Previews: PreviewProvider {
     }
 }
 
-
+//padding fo rlogin button and pushability
 struct SocalLoginButton: View {
     var image: Image
     var text: Text
