@@ -14,8 +14,10 @@ struct WelcomeScreenView: View {
                 Color("BgColor").edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
+                    //our app logo
                     Image(uiImage: #imageLiteral(resourceName: "onboard"))
                     Spacer()
+                    //message to get startted
                     PrimaryButton(title: "Get Started")
                     
                     NavigationLink(
@@ -33,7 +35,7 @@ struct WelcomeScreenView: View {
                                 .padding(.vertical)
                         })
                         .navigationBarHidden(true)
-                    
+                    //option for users with an account already.
                     HStack {
                         Text("Need an account? ")
                         Text("LOGIN")
