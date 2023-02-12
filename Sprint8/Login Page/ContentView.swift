@@ -20,6 +20,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+//Main button on get started menu
 struct PrimaryButton: View {
     var title: String
     var body: some View {
