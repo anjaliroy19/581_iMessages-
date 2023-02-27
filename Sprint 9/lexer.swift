@@ -71,6 +71,7 @@ class Lexer {
         currentIndex = input.startIndex
     }
 
+    /// Advances the current index and sets the current character to the next character in the input string.
     func advance() {
         guard currentIndex < input.endIndex else {
             currentChar = nil
@@ -80,38 +81,42 @@ class Lexer {
         currentIndex = input.index(after: currentIndex)
     }
 
-    func getNextToken() -> Token? {
-        skipWhiteSpaceAndComments()
-
-        guard let char = currentChar else { return nil }
-
-        if char.isLetter {
-            let word = getWord()
-            if let color = keywordColors[word] {
-                return Token(type: .keyword, range: currentIndex..<input.index(currentIndex, offsetBy: -word.count), color: color)
+    /// Skips over any white space and comments in the input string.
+    func skipWhiteSpaceAndComments() {
+        while let char = currentChar {
+            if char.isWhitespace {
+                advance()
+            } else if char == "/" && input[currentIndex..<input.index(after: currentIndex)] == "//" {
+                skipSingleLineComment()
+            } else if char == "/" && input[currentIndex..<input.index(after: currentIndex)] == "/*" {
+                skipMultiLineComment()
             } else {
-                return Token(type: .identifier, range: currentIndex..<input.index(currentIndex, offsetBy: -word.count), color: .black)
+                break
             }
-        } else if char.isNumber {
-            return Token(type: .number, range: currentIndex..<input.index(before: currentIndex), color: .magenta)
-        } else if char == "\"" {
-            let string = getString()
-            return Token(type: .string, range: currentIndex..<input.index(currentIndex, offsetBy: -string.count-2), color: .red)
-        } else {
-            advance()
         }
-
-        return nil
     }
 
-    func getWord() -> String {
-        var word = ""
-        while let char = currentChar, char.isLetter || char.isNumber || char == "_" {
-            word.append(char)
+    /// Skips over a single line comment in the input string.
+    func skipSingleLineComment() {
+        advance()
+        advance()
+
+        while let char = currentChar, char != "\n" {
             advance()
         }
-        return word
     }
 
-    func getString() -> String {
+    /// Skips over a multi-line comment in the input string.
+    func skipMultiLineComment() {
+        advance()
+        advance()
 
+        while let char = currentChar {
+            if char == "*" && input[currentIndex..<input.index(after: currentIndex)] == "/" {
+                advance()
+                advance()
+                break
+            } else {
+                advance()
+            }
+        }
