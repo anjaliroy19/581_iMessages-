@@ -2,3 +2,4 @@
     let newPosition = textField.selectedTextRange?.end.advanced(by: 4)
     textField.selectedTextRange = textField.textRange(from: newPosition!, to: newPosition!)
 }
+// This will move the cursor positon 4 places the orginial allocation
