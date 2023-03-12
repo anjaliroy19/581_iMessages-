@@ -1,0 +1,4 @@
+@IBAction func moveCursorButtonPressed(_ sender: Any) {
+    let newPosition = textField.selectedTextRange?.end.advanced(by: 4)
+    textField.selectedTextRange = textField.textRange(from: newPosition!, to: newPosition!)
+}
