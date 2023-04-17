@@ -1,0 +1,95 @@
+//File: main.cpp
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int lastDigit(int n){
+    return (n%10); //percent? no, mod!
+}
+int removeLastDigit(int n){
+    if(n<10){
+        n=0;
+    }
+    else{
+        n=n/10;
+    }
+    return(n);
+}
+int addDigit (int currentNum, int newDigit){
+    return ((currentNum * 10) + newDigit);
+}
+int reverse(int n){
+    int x = 0;
+    int y = 0;
+    while (n != 0){
+        y = lastDigit(n);
+        x = addDigit(x, y);
+        n = removeLastDigit(n);
+    }
+    return(x);
+}
+bool isPalindrome(int n){
+    int rev = reverse(n);
+    if (rev==n){
+        return (true);
+    }
+    else{
+        return (false);
+    }
+}
+int countDigits(int n) //returns the number of digits in n using removeLastDigit{
+    int counter = 0;
+    while (n != 0){
+        int x = removeLastDigit(n);
+        n = x;
+        ++counter;
+    }
+    return (counter);
+}
+int sumDigits(int n){
+    int sum = 0;
+    while (n != 0){
+        sum = sum + n % 10;
+        n = removeLastDigit(n);
+    }
+    return (sum);
+}
+void printMenu(){
+    cout << "1. Count digits\n" << "2. Sum digits\n" << "3. Is Palindrome\n" << "4. Reverse\n" << "5. Exit\n" << "Choice: ";
+}
+void run(){
+    int choice = 0;
+    do{
+        int n = 0;
+        printMenu();
+        cin >> choice;
+        if (choice <= 4){
+            cout << "Number: ";
+            cin >> n;
+            cout << endl;
+        }
+        if (choice == 1){
+            int x = countDigits(n);
+            cout << x << endl;
+        }
+        else if (choice == 2){
+            int x = sumDigits(n);
+            cout << x << endl;
+        }
+        else if (choice == 3){
+            bool x = isPalindrome(n);
+            cout << boolalpha;
+            cout << x << endl;
+        }
+        else if (choice == 4){
+            int x = reverse(n);
+            cout << x << endl;
+        }
+        cout << endl;
+    }while (choice != 5);
+}
+
+int main(){
+    run();
+    return(0);
+}
